@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        
+        </title>
+    </head>
+<body>
+    <script async>
+            const queryString = window.location.search;
+            var sender = new URLSearchParams(queryString).get('sender');
+            var receiver = new URLSearchParams(queryString).get('receiver');
+            async function getMsgs(){
+                const msgs = await fetch('/getMsgs');
+                const data = await msgs.json();
+                for(item of data){
+                    if(((item.sender == sender) || (item.sender == receiver)) && (item.receiver == sender) || (item.receiver == receiver)){
+                        const root = document.createElement('div');
+                        const name = document.createElement('div');
+                        const date = document.createElement('div');
+                        const msg = document.createElement('div');
+                        const gap = document.createElement('div');;
+                        name.textContent = `${item.sender}: `;
+                        date.textContent = `${item.date}`;
+                        msg.textContent = `${item.msg}`;
+                        gap.textContent = `---------------------------------------------`;
+                        root.append(name, msg, date, gap);
+                        document.body.append(root);
+                    }
+                }
+            }
+            getMsgs();
+            async function sendInfo(){
+                const msg = document.getElementById('msg').value;
+                const data = {
+                        sender: sender,
+                        receiver: receiver,
+                        msg: msg
+                };
+                const response = await fetch('/message', {
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, *cors, same-origin
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'same-origin', // include, *same-origin, omit
+                headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify(data) // body data type must match "Content-Type" header
+            });
+            }
+        </script>
+        Type message here:
+        <textarea id = "msg" rows = "10" cols = "35"></textarea>
+        <button onclick = "sendInfo()">Send</button>
+    </div>
+</body>
+</html>

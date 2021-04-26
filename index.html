@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<p><h2>User Login</h2></p>
+    <script src="index.js"></script>
+    <div class = "form">
+    <form method = "POST" action = "send">
+    App I.D.: 
+    <input type = "text" name = "id"><br>
+    Password: 
+    <input type = "password" name = "pass">
+    <button type = "submit">Submit</button>
+    </div>
+    <script>
+            async function submitInfo(){
+                var id = await document.getElementById('id').value;
+                var data = await { id };
+                const options = {
+                    method: 'POST', 
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }
+                fetch('/send', options).then(response => {
+                        console.log(response);
+                });
+            }
+        </script>
+</body>
+</html>

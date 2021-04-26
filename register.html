@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Register User
+        </title>
+    </head>
+<body>
+    <h2>Oops.. User not found!</h2>
+    <h4>To register:</h4>
+    <div class = "form">
+        <form method = "POST" action = "regUser" data-netlify="true" netlify @submit.prevent="sendForm" ref="formTag">
+            First Name:
+            <input type = "text" name = "fname"></input></br>
+            Last Name:
+            <input type = "text" name = "lname"></input></br>
+            App I.D.: 
+            <input type = "text" name = "id"></input></br>
+            Password: 
+            <input type = "password" name = "pass"></input></br>
+            <button type = "submit">Register</button>
+        </form>
+</body>
+</html>

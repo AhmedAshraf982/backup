@@ -1,0 +1,61 @@
+<!doctype.html>
+<head>
+    <style>
+        #user {
+            font-size: 60px;
+            text-align: center;
+        }
+        #available {
+            font-size: 20px;
+            padding: 5px;
+            margin: 0 0 0 auto;
+            display: block;
+            width: 300px;
+            border: 3px dashed blue;
+        }
+    </style>
+    <title>
+        Message App
+    </title>
+</head>
+    <body>
+        <div id = "user">
+        </div>
+        <div id = "available">
+        </div>
+       <script async>
+            var fname, lname, id, pass;
+            const queryString = window.location.search;
+            fname = new URLSearchParams(queryString).get('fname');
+            lname = new URLSearchParams(queryString).get('lname');
+            id = new URLSearchParams(queryString).get('id');
+            pass = new URLSearchParams(queryString).get('pass');
+            console.log(fname);
+            getData();
+            document.getElementById("user").textContent = "Welcome " + fname + "!";
+            async function getData(){
+                const response = await fetch('/getUsers');
+                const data = await response.json();
+                var users = '<div id = "content">' + 
+                            '<b>Available Users:</b><br>';
+                // const root = document.createElement('div');
+                // root.append("Available Users:");
+                for(item of data){
+                    if(fname != item.fname){
+                        users += '<a href = "user.html?sender=' + `${fname}` + '&receiver=' + `${item.fname}` + '">' + `${item.fname}` + `<\a>` + '<br>';
+                    }
+                 //   const name = document.createElement('div');
+                    // const date = document.createElement('date');
+                    //name.textContent = `${item.fname}`;
+                    // const dateString = new Date().toLocaleString();
+                    // date.textContent = dateString;
+                   // root.append(name);
+                    //document.body.append(root);
+                }
+                users += '</div>'
+                document.getElementById("available").innerHTML = users;
+                console.log(data);
+            }
+        </script>
+     </body>
+</html>
