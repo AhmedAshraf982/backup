@@ -1,0 +1,36 @@
+Glasgow,Scotland,04:36,21:54
+Buenos Aires,Argentina,07:54,17:49
+Mexico City,Mexico,06:58,20:11
+Moscow,Russia,03:51,21:04
+Tokyo,Japan,04:27,18:52
+Beijing,China,04:48,19:37
+Riyadh,Saudi Arabia,05:04,18:38
+Berlin,Germany,04:48,21:21
+Madrid,Spain,06:46,21:39
+Rome,Italy,05:37,20:39
+Kiev,Ukraine,04:50,21:02
+Dakar,Senegal,06:40,19:35
+Brasilia,Brazil,06:34,17:46
+Havana,Cuba,06:44,20:11
+Paris,France,05:51,21:47
+Bucharest,Romania,05:34,20:54
+Minsk,Belarus,04:43,21:32
+Warsaw,Poland,04:19,20:49
+Budapest,Hungary,04:50,20:34
+Vienna,Austria,04:57,20:48
+Stockholm,Sweden,03:40,21:52
+Prague,Czech Republic,04:57,21:04
+Copenhagen,Denmark,04:32,21:44
+Sofia,Bulgaria,05:51,20:59
+Dublin,Ireland,05:02,21:45
+Brussels,Belgium,05:33,21:48
+Riga,Latvia,04:37,22:07
+Amsterdam,Netherlands,05:23,21:54
+Athens,Greece,06:04,20:42
+Oslo,Norway,04:04,22:27
+Helsinki,Finland,04:05,22:33
+Washington,United States,05:44,20:28
+Lisbon,Portugal,06:13,20:56
+Wellington,New Zealand,07:39,16:58
+Canberra,Australia,07:05,16:57
+New Delhi,India,05:24,19:14

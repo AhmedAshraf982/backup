@@ -1,0 +1,7 @@
+Error occured on this URL: https://www.amazon.com/Episode-1/dp/B07BN6H2WD/ref=sr_1_4?dchild=1&keywords=u&qid=1629550650&sr=8-4
+Traceback (most recent call last):
+  File "D:\vsCodes\send to Helper\bot.py", line 163, in main_bot
+    scroll_to_reviews(driver)
+  File "D:\vsCodes\send to Helper\bot.py", line 56, in scroll_to_reviews
+    pyautogui.moveTo(reviews_part.location['x'], reviews_part.location['y'], 1)
+UnboundLocalError: local variable 'reviews_part' referenced before assignment

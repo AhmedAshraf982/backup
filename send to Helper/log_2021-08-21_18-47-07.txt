@@ -1,0 +1,5 @@
+Error occured on this URL: https://www.amazon.com/
+Traceback (most recent call last):
+  File "C:\Users\Hp\Desktop\send to Helper\bot.py", line 129, in main_bot
+    pyautogui.moveTo(search_box.location['x'], search_box.location['y'], 1)
+UnboundLocalError: local variable 'search_box' referenced before assignment

@@ -1,0 +1,5 @@
+Error occured on this URL: https://www.amazon.com/
+Traceback (most recent call last):
+  File "C:\Users\Hp\Desktop\send to Helper\bot.py", line 130, in main_bot
+    search_box.send_keys(f'{keywords[randomKeywords]}')
+IndexError: list index out of range
